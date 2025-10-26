@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nuestro Cofre Abierto!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400&display=swap" rel="stylesheet">
+</head>
+<body class="cofre-page">
+    <header>
+        <h1>🎉 ¡Lo lograste! El Cofre está Abierto, Mi Vida. 🎉</h1>
+        <p>Aquí están todos nuestros recuerdos, el archivo de nuestro amor.</p>
+        <a href="{{ url_for('logout') }}" class="boton-cerrar">🔒 Cerrar Sesión</a>
+    </header>
+
+    <main class="galeria-cartas">
+        
+        <div class="carta carta-a-mano">
+            <h3 class="carta-titulo">Carta #1: El Día que Te Conocí</h3>
+            <p class="carta-fecha">Fecha: 15 de Octubre de [Año]</p>
+            <div class="carta-contenido-img">
+                <img src="{{ url_for('static', filename='images/foto_ejemplo.jpg') }}" 
+                     alt="Foto de la carta"
+                     onclick="this.classList.toggle('zoom')">
+                <small>Haz clic para ampliar</small>
+            </div>
+            <p class="carta-tipo">Tipo: Primer Recuerdo</p>
+        </div>
+
+        <div class="carta carta-digital">
+            <h3 class="carta-titulo">Carta #2: El Poema que te Gusta</h3>
+            <p class="carta-fecha">Fecha: 10 de Diciembre de [Año]</p>
+            <div class="carta-contenido-texto">
+                <p>Aquí puedes escribir un mensaje largo.</p>
+                <blockquote class="poema">
+                    "Tus ojos son el faro en mi noche oscura,<br>
+                    Tu risa, la melodía que me cura."
+                </blockquote>
+            </div>
+            <p class="carta-tipo">Tipo: Mensaje de Amor</p>
+        </div>
+
+        </main>
+</body>
+</html>

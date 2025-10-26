@@ -1,0 +1,133 @@
+/* -------------------- FUENTES Y BASE -------------------- */
+body {
+    font-family: 'Lora', serif; /* Fuente para el cuerpo del texto */
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fcf8f3; /* Fondo color crema suave */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Fuente para títulos (más elegante) */
+    color: #7b2434; /* Tono borgoña/vino */
+}
+
+/* -------------------- ESTILOS DE LA PÁGINA DE LOGIN -------------------- */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9d5c4; /* Fondo más oscuro para el login */
+}
+
+.cofre-cerrado {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border: 3px solid #7b2434; 
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* -------------------- FORMULARIO Y BOTONES -------------------- */
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"], .boton-cerrar {
+    background-color: #7b2434;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+button[type="submit"]:hover, .boton-cerrar:hover {
+    background-color: #a03c54;
+}
+
+/* -------------------- ESTILOS DEL COFRE ABIERTO -------------------- */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e9d5c4;
+    margin-bottom: 40px;
+}
+
+.galeria-cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.carta {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s;
+    border-left: 5px solid #7b2434; 
+}
+
+.carta-titulo {
+    color: #a03c54;
+    margin-top: 0;
+    border-bottom: 1px dashed #e9d5c4;
+    padding-bottom: 5px;
+}
+
+.carta-contenido-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+/* Efecto de zoom */
+.carta-contenido-img img.zoom {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); 
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 100;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.poema {
+    border-left: 3px solid #7b2434;
+    padding-left: 15px;
+    margin: 15px 0;
+    font-style: italic;
+    background-color: #f7f7f7;
+    padding: 10px;
+}
