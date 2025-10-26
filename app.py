@@ -1,3 +1,4 @@
+import os # 🔴 NUEVO: NECESARIO PARA OBTENER EL PUERTO DE RENDER
 from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
@@ -41,6 +42,7 @@ def logout():
     session.pop('logged_in', None)
     return redirect(url_for('index'))
 
+# 👇 CÓDIGO MODIFICADO PARA FUNCIONAR EN RENDER
 if __name__ == '__main__':
-    # Inicia el servidor web en tu computadora
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
