@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = 'una_clave_secreta_para_tu_proyecto_personal_9876' 
 
 # 🔴 2. ¡CÁMBIALA! La contraseña que tu novia debe usar.
-CONTRASENA_SECRETA = "nuestroaniversario" 
+CONTRASENA_SECRETA = "1516" 
 
 @app.route('/')
 def index():
